@@ -1,12 +1,9 @@
-const fs = require('fs');
-const fastCsv = require('fast-csv');
-const customParseFormat = require('dayjs/plugin/customParseFormat');
-const utc = require('dayjs/plugin/utc');
-const dayjs = require('dayjs')
-  .extend(customParseFormat)
-  .extend(utc);
-const StreamBuf = require('../utils/stream-buf');
-
+import fs = require('fs');
+import fastCsv = require('fast-csv');
+import customParseFormat = require('dayjs/plugin/customParseFormat');
+import utc = require('dayjs/plugin/utc');
+const dayjs = require('dayjs').extend(customParseFormat).extend(utc);
+import StreamBuf = require('../utils/stream-buf');
 const {
   fs: {exists},
 } = require('../utils/utils');
